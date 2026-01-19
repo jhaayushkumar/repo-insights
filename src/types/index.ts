@@ -7,6 +7,9 @@ export interface Contributor {
     closedPRs: number
     isMaintainer: boolean
     profileUrl: string
+    mergedPRsList: PullRequest[]
+    openPRsList: PullRequest[]
+    closedPRsList: PullRequest[]
 }
 
 export interface PullRequest {

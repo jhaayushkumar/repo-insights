@@ -86,6 +86,9 @@ export const fetchRepositoryData = async (
                     closedPRs: 0,
                     isMaintainer: false,
                     profileUrl: pr.user.html_url,
+                    mergedPRsList: [],
+                    openPRsList: [],
+                    closedPRsList: [],
                 })
             }
 
@@ -94,10 +97,13 @@ export const fetchRepositoryData = async (
 
             if (pr.merged_at) {
                 contributor.mergedPRs++
+                contributor.mergedPRsList.push(pr)
             } else if (pr.state === 'open') {
                 contributor.openPRs++
+                contributor.openPRsList.push(pr)
             } else if (pr.state === 'closed') {
                 contributor.closedPRs++
+                contributor.closedPRsList.push(pr)
             }
         }
 
