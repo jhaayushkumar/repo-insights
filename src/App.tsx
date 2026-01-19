@@ -8,26 +8,14 @@ import { fetchRepositoryData } from './utils/githubApi'
 import type { Contributor } from './types'
 
 function App() {
-    const [darkMode, setDarkMode] = useState(() => {
-        const saved = localStorage.getItem('darkMode')
-        return saved ? JSON.parse(saved) : false
-    })
     const [contributors, setContributors] = useState<Contributor[]>([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
 
+    // Always enforce dark mode
     useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-        localStorage.setItem('darkMode', JSON.stringify(darkMode))
-    }, [darkMode])
-
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode)
-    }
+        document.documentElement.classList.add('dark')
+    }, [])
 
     const handleRepositorySubmit = async (repoUrl: string, timePeriod: string) => {
         setLoading(true)
@@ -49,7 +37,7 @@ function App() {
             <AnimatedBackground />
 
             <div className="relative z-10 flex flex-col min-h-screen bg-gray-50/90 dark:bg-gray-900/90 transition-colors duration-200">
-                <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+                <Header />
 
                 <main className="flex-grow container mx-auto px-4 py-8 max-w-6xl">
                     <div className="mb-8">
