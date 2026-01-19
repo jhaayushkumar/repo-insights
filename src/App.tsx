@@ -45,51 +45,54 @@ function App() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-50/80 dark:bg-gray-900/80 transition-colors duration-200 relative">
+        <div className="min-h-screen relative overflow-hidden">
             <AnimatedBackground />
-            <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-            <main className="flex-grow container mx-auto px-4 py-8 max-w-6xl">
-                <div className="mb-8">
-                    <h1 className="text-4xl font-bold text-center mb-4 text-gray-800 dark:text-white">
-                        Repo Insights
-                    </h1>
-                    <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
-                        Analyze GitHub repository contributions and track pull request activity
-                    </p>
+            <div className="relative z-10 flex flex-col min-h-screen bg-gray-50/90 dark:bg-gray-900/90 transition-colors duration-200">
+                <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-                    <RepositoryInput onSubmit={handleRepositorySubmit} loading={loading} />
-                </div>
-
-                {error && (
-                    <div className="card bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 mb-6">
-                        <p className="text-red-700 dark:text-red-300 text-center">{error}</p>
-                    </div>
-                )}
-
-                {loading && (
-                    <div className="card text-center">
-                        <div className="flex flex-col items-center justify-center space-y-4">
-                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
-                            <p className="text-gray-600 dark:text-gray-300">Analyzing repository...</p>
-                        </div>
-                    </div>
-                )}
-
-                {!loading && contributors.length > 0 && (
-                    <ContributorList contributors={contributors} />
-                )}
-
-                {!loading && !error && contributors.length === 0 && (
-                    <div className="card text-center">
-                        <p className="text-gray-500 dark:text-gray-400">
-                            Enter a GitHub repository URL above to get started
+                <main className="flex-grow container mx-auto px-4 py-8 max-w-6xl">
+                    <div className="mb-8">
+                        <h1 className="text-4xl font-bold text-center mb-4 text-gray-800 dark:text-white">
+                            Repo Insights
+                        </h1>
+                        <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
+                            Analyze GitHub repository contributions and track pull request activity
                         </p>
-                    </div>
-                )}
-            </main>
 
-            <Footer />
+                        <RepositoryInput onSubmit={handleRepositorySubmit} loading={loading} />
+                    </div>
+
+                    {error && (
+                        <div className="card bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 mb-6">
+                            <p className="text-red-700 dark:text-red-300 text-center">{error}</p>
+                        </div>
+                    )}
+
+                    {loading && (
+                        <div className="card text-center">
+                            <div className="flex flex-col items-center justify-center space-y-4">
+                                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
+                                <p className="text-gray-600 dark:text-gray-300">Analyzing repository...</p>
+                            </div>
+                        </div>
+                    )}
+
+                    {!loading && contributors.length > 0 && (
+                        <ContributorList contributors={contributors} />
+                    )}
+
+                    {!loading && !error && contributors.length === 0 && (
+                        <div className="card text-center">
+                            <p className="text-gray-500 dark:text-gray-400">
+                                Enter a GitHub repository URL above to get started
+                            </p>
+                        </div>
+                    )}
+                </main>
+
+                <Footer />
+            </div>
         </div>
     )
 }
