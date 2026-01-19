@@ -3,7 +3,7 @@
 ## Overview
 Repo Insights is an open-source web application designed to analyze GitHub repository contributions and track pull request activity. It helps identify active contributors in open-source projects, making it especially useful for Google Summer of Code (GSoC) mentors, organization administrators, and participants who want to assess engagement levels in various repositories.
 
-🔗 [Live Demo](https://repo-insights.vercel.app/)
+🔗 **[Live Demo](https://repo-insights-enrezyltd-jhaayushkumars-projects.vercel.app)** - Try it now!
 
 ## Features
 
