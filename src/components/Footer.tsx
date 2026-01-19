@@ -5,7 +5,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
                     <div className="text-gray-600 dark:text-gray-300 text-center md:text-left">
                         <p className="text-sm">
-                            Made with ❤️ by{' '}
+                            Made by{' '}
                             <a
                                 href="https://github.com/jhaayushkumar"
                                 target="_blank"

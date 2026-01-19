@@ -25,11 +25,11 @@ export default function PRListModal({ isOpen, onClose, title, prs, type }: PRLis
     const getStatusIcon = () => {
         switch (type) {
             case 'merged':
-                return '✓'
+                return 'Merged'
             case 'open':
-                return '⏳'
+                return 'Open'
             case 'closed':
-                return '✗'
+                return 'Closed'
         }
     }
 

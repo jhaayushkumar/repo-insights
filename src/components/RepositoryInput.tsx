@@ -74,7 +74,7 @@ export default function RepositoryInput({ onSubmit, loading }: RepositoryInputPr
                             Analyzing...
                         </span>
                     ) : (
-                        '🔍 Analyze Repository'
+                        'Analyze Repository'
                     )}
                 </button>
             </form>

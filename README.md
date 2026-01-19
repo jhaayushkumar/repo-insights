@@ -1,4 +1,4 @@
-# Repo Insights - Track GitHub Repository Activity 🔍
+# Repo Insights - Track GitHub Repository Activity
 
 ## Overview
 Repo Insights is an open-source web application designed to analyze GitHub repository contributions and track pull request activity. It helps identify active contributors in open-source projects, making it especially useful for Google Summer of Code (GSoC) mentors, organization administrators, and participants who want to assess engagement levels in various repositories.
@@ -100,6 +100,15 @@ npm run build
 npm start
 ```
 
+## Contributing
+
+We welcome contributions! There are **good first issues** available for beginners who want to contribute. Here's how you can get started:
+
+1. **Fork the repository** and create a new branch.
+2. **Pick an issue** from the [Issues tab](https://github.com/jhaayushkumar/repo-insights/issues).
+3. **Implement the changes** and submit a pull request.
+4. **Wait for review and feedback!**
+
 ## Contact
 
 If you have any questions, feel free to open an issue or reach out:
@@ -113,4 +122,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by Ayush Kumar Jha
+Made with love by Ayush Kumar Jha

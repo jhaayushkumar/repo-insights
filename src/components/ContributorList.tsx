@@ -70,7 +70,7 @@ export default function ContributorList({ contributors }: ContributorListProps) 
             <div className="space-y-6">
                 <div className="card">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-                        📊 Contributors ({contributors.length})
+                        Contributors ({contributors.length})
                     </h2>
                     <p className="text-gray-600 dark:text-gray-300 mb-6">
                         Found {contributors.length} contributor{contributors.length !== 1 ? 's' : ''} in this repository
@@ -108,7 +108,7 @@ export default function ContributorList({ contributors }: ContributorListProps) 
                                             </a>
                                             {contributor.isMaintainer && (
                                                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300">
-                                                    👑 Maintainer
+                                                    Maintainer
                                                 </span>
                                             )}
                                         </div>
@@ -134,7 +134,7 @@ export default function ContributorList({ contributors }: ContributorListProps) 
                                                     {contributor.mergedPRs}
                                                 </div>
                                                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                                    ✓ Merged
+                                                    Merged
                                                 </div>
                                             </div>
 
@@ -149,7 +149,7 @@ export default function ContributorList({ contributors }: ContributorListProps) 
                                                     {contributor.openPRs}
                                                 </div>
                                                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                                    ⏳ Open
+                                                    Open
                                                 </div>
                                             </div>
 
@@ -164,7 +164,7 @@ export default function ContributorList({ contributors }: ContributorListProps) 
                                                     {contributor.closedPRs}
                                                 </div>
                                                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                                    ✗ Closed
+                                                    Closed
                                                 </div>
                                             </div>
                                         </div>
@@ -177,7 +177,6 @@ export default function ContributorList({ contributors }: ContributorListProps) 
 
                 <div className="card bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800">
                     <div className="flex items-start space-x-3">
-                        <span className="text-2xl">💡</span>
                         <div>
                             <h3 className="font-semibold text-gray-800 dark:text-white mb-1">
                                 Pro Tip
