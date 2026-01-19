@@ -100,15 +100,6 @@ npm run build
 npm start
 ```
 
-## Contributing
-
-We welcome contributions! There are **good first issues** available for beginners who want to contribute. Here's how you can get started:
-
-1. **Fork the repository** and create a new branch.
-2. **Pick an issue** from the [Issues tab](https://github.com/jhaayushkumar/repo-insights/issues).
-3. **Implement the changes** and submit a pull request.
-4. **Wait for review and feedback!**
-
 ## Contact
 
 If you have any questions, feel free to open an issue or reach out:
